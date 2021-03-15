@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+
+
+
+
+<div class="container">
+
+
+	<p style="background-color: lightpink;
+    border:lightgray 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    "> {% translate "also that everyone should eat and drink and take pleasure in all his toil-this is God's gift to man. Ecclesiaste 3:13" %}  </p>
+
+	<div class="alert alert-success" role="alert">
+		<h4 class="alert-heading"><i class="fa fa-info-circle"></i>{% translate " Information:!" %}</h4>
+		{% translate "We advise you to only pay out a sum of money if you trust the advertiser." %}"
+		<hr>
+		<p class="mb-0">{% translate " A certified account has an identity known to our platform." %}</p>
+	</div>
+
+
+	{% if use %}
+
+
+
+	<div class="container">
+		<hr>
+
+		<div class="card">
+			<div class="row">
+				<aside class="col-sm-5 border-right">
+					<article class="img-fluid w-100">
+
+						<div class="item" style="position:relative; padding-top:20px;display:inline-block;">
+
+							<!--premium-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "premium" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:green;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:450px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--pro-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "pro" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:orange;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:450px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--vip-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "vip" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:red;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:450px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--standard-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "standard" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;"></span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:450px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+
+							<!-- when the theuser don't upload the profil picture -->
+							<!-- ici si l'annonce est premium on affiche le badge "NEW"-->
+							<!--premium-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "premium" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:green; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--pro-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "pro" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:orange; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--vip-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "vip" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:red; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--standard-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "standard" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;"></span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="max-width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+						</div>
+						<!-- end profil picture-->
+
+
+					</article> <!-- gallery-wrap .end// -->
+				</aside>
+				<aside class="col-sm-7">
+					<article class="card-body p-5">
+						<i
+						<p class="title "><i class="fa fa-certificate text-danger"></i>{% translate "Skills published from an account" %} <i class="font-weight-bold text-danger"> {{use.customermodel.type_account}}</i></p>
+						<p class="title "><i class="fas fa-asterisk text-danger"> </i>{% translate "Reference:" %} <i class="font-weight-bold text-danger">A{{use.id}}-U{{use.customermodel.id}}</i></p>
+						<p class="card-title "><i class="fa fa-info-circle"></i> Informations supplementaires</p>
+
+						<h3 class="title text-primary mb-3">{{use.category}}</h3>
+
+						<h6 class="title text-muted mb-3"><i class="fa fa-map-marker" aria-hidden="true"></i>{% translate " Ville:" %} {{ use.city|upper }}</h6>
+
+						<!--civility name </p>-->
+						<p class="title text-info"><i class="fa fa-user" aria-hidden="true"></i> {{user.civility}} {{ use.first_name }} {{ use.last_name }} </p>
+
+						<hr>
+						<!-- competences-->
+						<p class="">
+							<span class="currency h3 text-warning">
+								<i class="fa fa-tools" aria-hidden="true"></i>{% translate " Skills:" %}
+</i>
+						</span>
+						</p>
+
+						<dl class="item-property">
+							<dt>{% translate "Description" %}</dt>
+							<dd>
+								<p>
+									<i class="far fa-hand-point-right"></i> {{ use.competence }} </i>
+								</p>
+							</dd>
+						</dl>
+						<!-- disponibility-->
+
+						<dl class="param param-feature">
+							<dt><i class="fa fa-calendar-alt"></i>{% translate "Disponibility :" %}</dt>
+							<dd class="text-muted">{{use.disponibility_periode_work}}</dd>
+						</dl>  <!-- item-property-hor .// -->
+						<dl class="param param-feature">
+							<dt><i class="far fa-clock" aria-hidden="true"></i>{% translate " Time :" %}</dt>
+							<dd class="text-muted">{{ use.available_time_work }}</dd>
+						</dl>
+						<!-- item-property-hor .//
+
+	<dl class="param param-feature">
+		<dt>Delivery</dt>
+		<dd>Russia, USA, and Europe</dd>
+	</dl>  <!-- item-property-hor .// -->
+
+						<hr>
+
+						<!-- display note and number of votes'user-->
+						<div class="">
+							<dl class="param param-inline">
+								<dt><i class="fa fa-info-circle"></i>{% translate " Skills of the advertiser" %}</dt>
+								<dd>
+									<p class="card-title text-info"><i class="fa fa-envelope-square"></i>{% translate " Votes :" %} {{ user.number_of_vote }}</p>
+									<p class="card-title text-danger"><i class="fa fa-thermometer-full" aria-hidden="true"></i>{% translate " Score:" %} {{ user.note }} </p>
+								</dd>
+							</dl>  <!-- item-property .// -->
+						</div> <!-- col.// -->
+						<hr>
+						<p class="card-title font-weight-bold"><i class="fa fa-info-circle"></i>{% translate " Contact the advertiser" %}</p>
+						<p>
+							<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#centralModal"><i class="fas fa-phone-alt"></i>{% translate " See the number" %}</button>&nbsp;&nbsp; &nbsp;
+						</p>
+						<p>
+							<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#centralModalSm"><i class="fa fa-envelope-square"></i>{% translate " Send a message" %}</button>
+						</p>
+
+
+						<!-- Central Modal Medium -->
+						<div class="modal fade" id="centralModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<!--Content-->
+								<div class="modal-content">
+									<!--Header-->
+									<div class="modal-header">
+										<h4 class="modal-title w-100" id="myModalLabel">{% translate "Advertiser's number" %}</h4>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<!--Body-->
+									<div class="modal-body">
+										<i class="fas fa-phone-alt"></i>{% translate " Phone:" %} {{ use.mobile_phone }}
+										
+									</div>
+									<!--Footer-->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">{% translate "Close" %}</button>
+										<button type="button" class="btn btn-primary">{% translate "Save changes" %}</button>
+									</div>
+								</div>
+								<!--/.Content-->
+							</div>
+						</div>
+						<!-- Central Modal Medium -->
+						<!-- Central Modal Small -->
+						<div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-sm" role="document">
+								<!--Content-->
+								<div class="modal-content">
+									<!--Header-->
+									<div class="modal-header">
+										<h4 class="modal-title w-100" id="myModalLabel">{% translate "Advertiser's email" %}</h4>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<!--Body-->
+									<div class="modal-body">
+										<i class="fa fa-envelope-square"></i>{% translate " Email :" %} {{use.email}}
+									</div>
+									<!--Footer-->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{% translate "Close" %}</button>
+										<button type="button" class="btn btn-primary btn-sm">{% translate "Save changes" %}</button>
+									</div>
+								</div>
+								<!--/.Content-->
+							</div>
+						</div>
+						<!-- Central Modal Small -->
+					</article> <!-- card-body.// -->
+				</aside> <!-- col.// -->
+			</div> <!-- row.// -->
+		</div> <!-- card.// -->  &nbsp; &nbsp;
+		<!-- I vote the user-->
+		<div class="container">
+			<p>
+				<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#EvaluateModal">{% translate "Evaluate the advertiser" %}</button>&nbsp;&nbsp; &nbsp;
+			</p>
+			<p>
+				<button type="button" class="btn btn-danger waves-effect waves-light" data-toggle="modal" data-target="#SignalModal">{% translate "Denounce the advertiser" %}</button>
+			</p>
+		</div>
+
+
+		<!-- Central Modal Medium -->
+		<div class="modal fade" id="EvaluateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header">
+						<h4 class="modal-title w-100" id="myModalLabel">{% translate "Enter a mark on 5" %}</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<i class="fas fa-phone-alt"></i>{% translate " mark:" %}"
+					</div>
+					<!--Footer-->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">{% translate "Close" %}</button>
+						<button type="button" class="btn btn-primary">{% translate "Save changes" %}</button>
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!-- Central Modal Medium -->
+		<!-- Central Modal Small -->
+		<div class="modal fade" id="SignalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header">
+						<h4 class="modal-title w-100" id="myModalLabel">{% translate "Denounce the advertiser" %}</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<i class="fa fa-envelope-square"></i>{% translate " your Email :" %}"
+					</div>
+					<div class="modal-body">
+						<i class="fa fa-envelope-square"></i>{% translate " your name :" %}"
+					</div>
+
+					<div class="modal-body">
+						<i class="fa fa-envelope-square"></i>{% translate " your message :" %}"
+					</div>
+					<!--Footer-->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{% translate "Close" %}</button>
+						<button type="button" class="btn btn-primary btn-sm">{% translate "send" %}</button>
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!-- Central Modal Small -->
+
+	</div>
+
+	<!--container.//-->
+	<!-- end/ -->
+	{% endif %}
+</div>
+	{% endblock %}
+
+
+
+
+

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+            <h3 class="text-success">{% translate "Searching for the skills of Christians" %} </h3>&nbsp;&nbsp;
+
+            <label for="label">{% translate "Key words. Example: commercial, engineer, secretary..." %}</label>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <form action="/customer/resultannounce/" method="get">
+        <div class="row justify-content-center">
+            <div class="col-sm-2">
+                <!-- {{ form.search|as_crispy_field }}-->
+            </div>
+
+
+            <div class="col-sm-4" >
+                {{ form.category|as_crispy_field}}
+            </div>
+
+            <div class="col-sm-2" style="width:100%">
+                {{ form.region|as_crispy_field }}
+            </div>
+            <div class="col-sm-4" style="width:100%; margin-top:20px">
+                <input class="btn btn-danger btn-rounded col-sm-4" type="submit" value="{% translate 'Search' %}" style="width:100%" />
+            </div>
+           
+        </div>
+        
+    </form>
+
+
+
+    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+    <h6>
+        {% blocktranslate %}
+        Let them give thanks to the Lord for his unfailing love and his wonderful deeds for mankind, for he satisfies the thirsty
+        and fills the hungry with good things. psalm 107:8-9
+        {% endblocktranslate %}
+    </h6>
+</div>
+
+
+    {% endblock %}
+
+
+
+
+

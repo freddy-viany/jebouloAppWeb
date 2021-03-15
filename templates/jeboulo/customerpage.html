@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color:blue">{% translate "Welcome" %}  {{username}}</a>
+        <a class="nav-item" href="/userorders/" style="text-decoration: none; color:red;">
+            {% translate "Your account is" %} {{customermod.type_account}}
+        </a>
+
+        <!--  ici on permet a un user de deposer une competence si et seulement si son nbre de publication est 0-->
+        {% if customermod.number_of_publication_announce == 0 %}
+        <a class="btn btn-danger" href="#">{% translate "post announce" %}</a>
+        {%else%}
+        <a class="btn btn-danger" href="/customer/addannounce/">{% translate "post announce" %}</a>
+        {%endif%}
+
+        <a class="btn btn-danger" href="/userlogout/">{% translate "logout" %}</a>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="">
+
+            <h6 class="text-success text-center">{% translate "Let everything that has breath praise the Lord. Psalm 150:6" %}</h6>
+            
+
+            <div class="row">
+                <div class="sm-12  rounded" style="padding-bottom:5px;padding-top:5px;">
+                    <div class="card">
+                        
+                        <div class="card-body text-left">
+                            <p class="card-title text-danger font-weight-bold ">
+                                <i class="fa fa-info-circle"></i>{% translate "Be a PREMIUM account:" %}
+                                <a class="btn btn-info btn-sm-outline" href="#">{% translate "1000 FCFA" %}</a>
+                            </p>
+                            <p class="card-title text-info font-weight-bold ">{% translate "Boost your account for a better visibility:" %}</p>
+
+                            <p class="card-title text-primary"></i>{% translate "Your visibility is multiplied by 10 for 5 days" %}</p>
+                            <p class="card-title text-primary"></i>{% translate "+ 2 sponsored ads" %}</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger btn-sm" href="#">{% translate "Acheter" %}</a>
+
+                        </div>
+                    </div> &nbsp;
+
+                    <div class="card">
+
+                        <div class="card-body text-left">
+                            <p class="card-title text-danger font-weight-bold ">
+                                <i class="fa fa-info-circle"></i>{% translate "Be a PRO account:" %}
+                                <a class="btn btn-info btn-sm" href="#">{% translate "5000 FCFA" %}</a>
+                            </p>
+                            <p class="card-title text-info font-weight-bold ">{% translate "Boost your account for a better visibility:" %}</p>
+
+                            <p class="card-title text-primary"></i>{% translate "Your visibility is multiplied by 12 for 3 Months" %}</p>
+                            <p class="card-title text-primary"></i>{% translate "+ 10 sponsored ads" %}</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger btn-sm" href="#">{% translate "Acheter" %}</a>
+
+                        </div>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;
+
+                <div class="  rounded" style="padding-bottom: 5px;padding-top: 5px;">
+                    <div class="card">
+
+                        <div class="card-body text-left">
+                            <p class="card-title text-danger font-weight-bold ">
+                                <i class="fa fa-info-circle"></i>{% translate "Be a VIP account:" %}
+                                <a class="btn btn-info btn-sm" href="#">{% translate "10 000 FCFA" %}</a>
+                            </p>
+                            <p class="card-title text-info font-weight-bold ">{% translate "Boost your account for a better visibility:" %}</p>
+
+                            <p class="card-title text-primary"></i>{% translate "Your visibility is multiplied by 15 for 6 Months" %}</p>
+                            <p class="card-title text-primary"></i>{% translate "+ 15 sponsored ads" %}</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger btn-sm" href="#">{% translate "Acheter" %}</a>
+
+                        </div>
+                    </div> &nbsp;
+                    <div class="card">
+
+                        <div class="card-body text-left">
+
+                            <!--  ici on permet a un user de deposer une competence si et seulement si son nbre de publication est 0-->
+                            {% if customermod.number_of_publication_announce == 0 %}
+                            <a href="#" class="btn btn-outline-danger btn-sm"><i class="fa fa-plus-circle"></i>{% translate "Buy one pack to" %}</a>
+                            {%else%}
+                            <p class="card-title text-success font-weight-bold ">
+                                <i class="fa fa-info-circle"></i>{% translate "My announce package" %}
+                            </p>
+                            <p class="card-title text-info font-weight-bold ">
+                                {% translate "You still have:" %}
+                                <a class="btn btn-outline-danger btn-sm" href="#">{{customermod.number_of_publication_announce}}</a>
+                                {% translate "Ads" %}
+                            </p>
+                            {%endif%}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div> 
+
+</div>
+
+
+
+            {% endblock %}

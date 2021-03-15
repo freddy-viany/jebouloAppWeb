@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Welcome </a>
+
+        <a class="btn btn-danger" href="/userloginview/">login</a> 
+    </div>
+</nav>
+
+{% for message in messages %}
+<p style="text-align: center">{{message}}</p>
+
+{% endfor %}
+
+<div class="container-fluid" style=" position: relative;
+        height: 700px;
+        background-size: cover;
+        background-image: url({% static '/img/E-working-1.png' %});">
+    <div class="container" style="width: 500px; height: 300px; right: 20px;top:50px; position: absolute; background-color: orange;padding:20px">
+        <h1 style="color: white;text-align: center">Sign up</h1>
+
+        <form method="post" action="/signupuser/">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="username" placeholder="username" style="margin-bottom: 20px">
+            <input type="password" class="form-control" name="password" placeholder="password" style="margin-bottom: 20px">
+            <input type="text" class="form-control" name="phoneno" placeholder="phoneno" style="margin-bottom: 20px">
+            <input type="submit" name="" class="btn btn-success" style="display: block;margin: auto;">
+        </form>
+    </div>
+</div>
+{% endblock %}

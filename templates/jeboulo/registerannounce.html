@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Ma page d'accueil{% endblock %}
+{% block bodyId %}registerCompPage{% endblock %}
+{% block content %}
+
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-8" style="width:80%">
+            <h1 class="text-success">{% translate "Submitting a skill" %}</h1>
+            <form action="/customer/pubannounce/" method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                {%if error %}
+                <p class=" ="error">{{ error }}</p>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.user_category|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.civility|as_crispy_field }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.mobile_phone|as_crispy_field }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.category|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.region|as_crispy_field }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        {{ form.city|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.available_time_work|as_crispy_field }}
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        {{ form.disponibility_periode_work|as_crispy_field }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form.picture_announce|as_crispy_field }}
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        {{ form.competence|as_crispy_field }}
+                    </div>
+                </div>
+
+
+                <input type="submit" class="btn btn-danger btn-sm" value="{% translate 'publish my announce' %} " />
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+ {% endblock %}
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+    {% block footerblook %}
+
+
+    <!-- Footer Links -->
+
+    <hr>
+
+
+
+    <hr>
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+                <i class="fab fa-facebook-f"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+                <i class="fab fa-twitter"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
+                <i class="fab fa-google-plus-g"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+                <i class="fab fa-linkedin-in"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
+                <i class="fab fa-dribbble"> </i>
+            </a>
+        </li>
+    </ul>
+    <!-- Social buttons -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        2020 Copyright:
+        <a href="#"> Exyohri</a>
+    </div>
+    <!-- Copyright -->
+    {% endblock footerblook%}
+</footer>
+<!-- Footer -->

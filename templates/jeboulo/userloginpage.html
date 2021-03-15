@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% block content %}
+
+
+
+    <div class="container" style="width:400px; height: 350px; background-color: orange; margin-top: 100px; padding: 30px">
+
+        <h1 style="color: white; text-align: center">{% translate "Please Login" %} </h1>
+        <form method="post" action="/customer/authenticate/">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="username" placeholder="username" style="margin-bottom: 10px">
+            <input type="password" class="form-control" name="password" placeholder="password" style="margin-bottom: 5px">
+            <a href="#" style="margin-bottom: 10px; color:black">{% translate "I forgot my password" %}</a>
+            <input type="submit" class="btn btn-success" name="" style="display: block;margin: auto">
+        </form>
+        <hr />
+        <h4 style="color: white; text-align: center">{% translate "Create an account" %} <a href="/usersignupview/" class="btn btn-danger btn-rounded">{% translate "create!" %}</a> </h4>
+
+        
+
+    </div>
+
+{% endblock %}

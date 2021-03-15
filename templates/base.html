@@ -1,0 +1,155 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Custom font icons-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/appton/1-1/css/fontastic.css">
+    <!-- Font Awesome CSS-->
+    <!-- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <script src="main.js"></script> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/878330c060.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <title>
+        {% block title %} {% translate "Jeboulo Announce Platform" %} {%endblock %}
+    </title>
+</head>
+
+
+<!--  la barre de navigation-->
+{% block mynavbar %}
+<!-- NAVIGATION BAR SECTION -->
+{% load static %}
+<nav class="navbar navbar-expand-lg " id="id-navbar">
+    <div class="container-fluid">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand" id='navnav-brand' href="#"><img src="{% static '/img/logo.png' %}" alt="" style="width: 300px; height: 86px;"></a>
+        <!-- Toggle Button-->
+        <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" id="btnbtn"><span>Menu</span><i class="fa fa-bars"></i></button>
+        <!-- Navbar Menu -->
+        <div id="navbarcollapse" class="collapse navbar-collapse col-8 ">
+            <ul class="navbar-nav ml-auto bg-light rounded">
+                <!-- Search-->
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link font-weight-bold">{% translate "Home" %}</a>
+                </li>
+                <!-- <li class="nav-item"><a href="#" class="nav-link">Listings</a>
+                </li> -->
+                <!-- <li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Pages</a>
+                    <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu"><a href="detail.html" class="dropdown-item">Listing detail</a><a href="post.html" class="dropdown-item">Blog post</a><a href="text.html" class="dropdown-item">Text page</a><a href="404.html" class="dropdown-item">404 - Not found</a>
+                        <a href="contact.html" class="dropdown-item">Contact</a>
+                    </div>
+                </li> -->
+                <li class="nav-item">
+                    <a href="/customer/searchannounce/" class="nav-link font-weight-bold">{% translate "Search for a skill" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/userloginview/" class="nav-link font-weight-bold">{% translate "Deposit a skill" %}</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto bg-light rounded">
+                <li>
+                    <a href="#" class="btn btn-outline-danger btn-sm" id="btnbtn"><i class="fa fa-hand-holding-usd"></i>{% translate "donate a gift" %}</a>
+                </li> &nbsp;
+                <li>
+                    <a href="/userloginview/" class="btn btn-success btn-sm" id="btnbtn"><i class="fa fa-user"></i>{% translate "connexion" %}</a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+{% endblock mynavbar %}
+
+<body class="body-edit" id="{% block bodyId %}genericPage{% endblock %}">
+    <header>
+        {% block headerContent %} {% endblock%}
+    </header>
+    <section id="content">
+        {% block content %}
+        {% endblock content%}
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small stylish-color-dark pt-4">
+        {% block footerblook %}
+
+
+        <!-- Footer Links -->
+
+        <hr>
+
+        <!-- Call to action -->
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1">{% translate "Subscribe for free to the newsletter" %}</h5>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" class="btn btn-success btn-rounded">{% translate "I register now!" %}</a>
+            </li>
+        </ul>
+        <!-- Call to action -->
+
+        <hr>
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                    <i class="fa fa-facebook-f"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i class="fa fa-twitter"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                    <i class="fa fa-dribbble"> </i>
+                </a>
+            </li>
+        </ul>
+        <!-- Social buttons -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+             2021 Copyright:
+            <a href="#"> D2A</a>
+        </div>
+        <!-- Copyright -->
+        {% endblock footerblook%}
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

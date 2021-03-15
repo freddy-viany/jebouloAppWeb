@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+
+
+
+
+<div class="container">
+
+
+	<p style="background-color: grey;
+    border:lightgray 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    ">{% translate "With my mouth I will greatly extol the Lord; in the great throng of worshipers I will praise him. Psalm 109:30" %}</p>
+
+	<div class="container">
+
+		<div class="row row-cols-1 ">
+			<!-- use for responsive display one card per row-->
+			{% if object_list %} {% for use in users %}
+			<div class="col s3 col-xs-5 col-sm-6 col-lg-4">
+
+				<div class="card-deck">
+					<div class="card" h-100 style="width: 18rem;">
+						<!-- here we choose the image which can be display.-->
+
+
+
+
+						<div class="item" style="position:relative; padding-top:20px;display:inline-block;">
+
+
+							<!--premium-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "premium" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:green;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:150px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--pro-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "pro" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:orange;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:150px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--vip-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "vip" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;background:red;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;">NEW</span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:150px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--standard-->
+							{% if  use.picture_announce %}
+							{% if use.customermodel.type_account == "standard" %}
+							<a href="#">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;"></span>
+								<img src="{{ use.picture_announce.url }}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width:auto; height:450px; display:inline-block;cursor:zoom-in" />
+
+							</a>
+							{% endif %}
+							{% endif %}
+
+
+							<!-- when the theuser don't upload the profil picture -->
+							<!-- ici si l'annonce est premium on affiche le badge "NEW"-->
+							<!--premium-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "premium" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:green; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--pro-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "pro" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:orange; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--vip-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "vip" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; background:red; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+															  font-size:20px;">NEW</span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+							<!--standard-->
+							{% if not use.picture_announce %}
+							{% if use.customermodel.type_account == "standard" %}
+							<a href="">
+								<span class="notify-badge" style="position:absolute; right:-20px; text-align:center;
+																  border-raduis:30px 30px 30px 30px; color:white; padding:5px 10px;
+																  font-size:20px;"></span>
+								<img src="{% static '/img/avatar.png' %}" class="card-img-top img-fluid img-thumbnail img-responsive" alt="Responsive image" style="max-width: 100%; height: 150px; display: inline-block; cursor: zoom-in">
+							</a>
+							{% endif %}
+							{% endif %}
+
+						</div>
+						<!-- end profil picture-->
+						<div class="card-body text-left">
+							<h6 class="card-title text-primary">{{use.category}}</h6>
+							<h7 class="card-subtitle text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>{% translate "City:" %} {{ use.city|upper }}</h7>
+
+							<p class="card-text text-info"><i class="fa fa-user" aria-hidden="true"></i> {{ use.first_name }} {{ use.last_name }} </p>
+
+							<!-- to get only a specific theuser -->
+							<p><a class="btn btn-info btn-sm" href="/customer/user/{{use.id}}/" role="button">{% translate "see more" %}</a></p>
+						</div>
+						<div class="card-footer" style="height: 47px; font-size: 15px;">
+							<i class="fa fa-certificate text-danger" aria-hidden="true"></i>	{% translate "Account:" %} <button type="button" class="btn btn-outline-success btn-sm">{{ use.customermodel.type_account }}</button> &nbsp;&nbsp;
+							<!-- <button type="button" class="btn btn-outline-danger btn-sm"> {{ use.first_name }} </button> -->
+
+						</div>
+					</div>
+				</div> &nbsp;
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+</div>
+
+
+<!-- pagination -->
+
+<div class="pagination justify-content-center">
+	<span class="step-links">
+		{% if page_obj.has_previous %}
+		<a href="?category={{ request.GET.category }}&page=1" class="btn btn-info btn-sm">&laquo; {% translate "first" %}</a>
+		<a href="?category={{ request.GET.category }}&page={{ page_obj.previous_page_number }}" class="btn btn-success btn-sm">{% translate "previous" %}</a>
+		{% endif %}
+
+		<span class="current">
+			Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+		</span>
+
+		{% if page_obj.has_next %}
+		<a href="?category={{ request.GET.category }}&page={{ page_obj.next_page_number }}" class="btn btn-success btn-sm">{% translate "next" %}</a>
+		<a href="?category={{ request.GET.category }}&page={{ page_obj.paginator.num_pages }}" class="btn btn-info btn-sm">{% translate "last" %} &raquo;</a>
+		{% endif %}
+	</span>
+</div>
+
+<!-- end/ -->
+{% endblock %}
+
+
+
+
+
