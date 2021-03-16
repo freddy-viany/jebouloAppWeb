@@ -1,1 +1,1 @@
-web: gunicorn exyohriapp.wsgi --log-file -
+web: gunicorn jebouloapp.wsgi --log-file -
