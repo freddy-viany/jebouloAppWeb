@@ -19,6 +19,9 @@ from jeboulo import settings
 from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 
+#les deux imports suivants sont pour les dernieres lignes importees dans le urlpatterns
+from django.views.static import serve
+from django.conf.urls import url
 
 app_name = 'jebouloapp'
 
@@ -26,6 +29,8 @@ urlpatterns = [
     path('', include('jebouloapp.urls')),
     path('i18n/', include('django.conf.urls.i18n')),  #Make sure this is present
     path('admin/', admin.site.urls),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}),  #les deux lignes suivantes sont importantes
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
 
 if settings.DEBUG:
