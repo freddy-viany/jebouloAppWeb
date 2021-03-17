@@ -82,7 +82,10 @@ WSGI_APPLICATION = 'jeboulo.wsgi.application'
 
 DATABASES = {
 
-'default': dj_database_url.config()
+'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 
 #A supprimer ou reintegrer
 #    'default': {
