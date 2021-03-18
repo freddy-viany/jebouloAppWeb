@@ -22,7 +22,8 @@ def homepageview(request):
 	user = AnnounceModel.objects.all()
 	return render (request, "jeboulo/homepage.html", {'user':user})
 
-# on recupere le user pour compter les competences deja inscrites
+def gohomepageview(request):
+	# on recupere le user pour compter les competences deja inscrites
 	user = AnnounceModel.objects.all()
 	return render (request, "jeboulo/homepage1.html", {'user':user})
 
