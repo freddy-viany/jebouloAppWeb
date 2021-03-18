@@ -22,8 +22,9 @@ def homepageview(request):
 	user = AnnounceModel.objects.all()
 	return render (request, "jeboulo/homepage.html", {'user':user})
 
-def gohomepageview(request):
-	return redirect('homepage')
+# on recupere le user pour compter les competences deja inscrites
+	user = AnnounceModel.objects.all()
+	return render (request, "jeboulo/homepage1.html", {'user':user})
 
 def signupuser(request):
 	username = request.POST['username']
