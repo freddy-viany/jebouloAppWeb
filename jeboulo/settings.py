@@ -83,9 +83,21 @@ WSGI_APPLICATION = 'jeboulo.wsgi.application'
 DATABASES = {
 
 'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': ‘d4c69t7o72ghlv’,
+
+        'USER': 'qoycjuuxcsvmjr',
+
+        'PASSWORD': '6dd173ac261f270172c755db3d77358fb958922a2738844b9e3eb90ea26007a2',
+
+        'HOST': 'ec2-18-214-208-89.compute-1.amazonaws.com',
+
+        'PORT': '5432',
+
     }
+
 
 #A supprimer ou reintegrer
 #    'default': {
