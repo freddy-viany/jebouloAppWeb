@@ -8,7 +8,7 @@ from jebouloapp import views
 
 urlpatterns = [
     path('', views.homepageview,  name='homepage'),
-    #path('gohomepage/', views.gohomepageview, name='gohomepage'),
+    path('gohomepage/', views.gohomepageview, name='gohomepage'),
     path('signupuser/',views.signupuser, name="signupuserpage"),
     path('userloginview/', views.userloginview, name="userloginpage"),
     path('usersignupview/', views.usersignupview, name="usersignuppage"),
