@@ -23,7 +23,8 @@ def homepageview(request):
 	return render (request, "jeboulo/homepage.html", {'user':user})
 
 def gohomepageview(request):
-	return redirect ('homepage')
+	user = AnnounceModel.objects.all()
+	return render (request, "jeboulo/homepage.html", {'user':user})
 
 def signupuser(request):
 	username = request.POST['username']
