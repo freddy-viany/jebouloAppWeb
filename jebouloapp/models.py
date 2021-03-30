@@ -3,6 +3,8 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
 
+from cloudinary.models import CloudinaryField
+
 # Create your models here.
 
 class CustomerModel(models.Model):
@@ -61,8 +63,9 @@ class AnnounceModel(models.Model):
 	available_time_work = models.CharField(verbose_name =_("Time of work"), max_length = 15)
 	disponibility_periode_work = models.CharField(verbose_name =_("Period of work"), max_length = 25)
 	competence = models.TextField(verbose_name =_("Describe your competences"), max_length = 100, help_text=_("Describe your expertise"), default='je suis capable de:')
-	picture_announce = models.ImageField(verbose_name =_("Picture announce"), upload_to='imgProfil/%Y/%m/%d',blank=True,null=True, help_text=_("Enter your profile picture (Optional)") )
-
+	#picture_announce = models.ImageField(verbose_name =_("Picture announce"), upload_to='imgProfil/%Y/%m/%d',blank=True,null=True, help_text=_("Enter your profile picture (Optional)") )
+	picture_announce = CloudinaryField(verbose_name =_("image"),blank=True,null=True, help_text=_("Enter your profile picture (Optional)"))
+	
 	first_name = models.CharField(verbose_name =_("First name"), max_length=30, help_text=_('Enter your First name'))
 	last_name = models.CharField(verbose_name =_("name"), max_length=30, help_text=_('Enter your name'))
 	email = models.EmailField(verbose_name =_("Email"), max_length=50, help_text=_('Enter your email'))
