@@ -198,7 +198,15 @@ class ResultView(ListView):
 		if category and region:
             #object_list = TheUser.objects.filter(thecompetences__competence__icontains=search, thecompetences__category=category, thecompetences__region=region )
             #object_list = TheCompetence.objects.filter(category__iexact=category,region__iexact=region).annotate()
-			CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+
+			########
+			#######NOTE: The syntax for the CASE WHEN/THEN is database-specific.
+			# #CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+			#The syntax above is for SQLite. For PostgreSQL, omit the parentheses 
+			#and use escaped single quotes instead of double quotes.
+			#####
+			
+			CASE_SQL = 'case when type_announce=\'vip\' then 1 when type_announce=\'pro\' then 2 when type_announce=\'premium\' then 3 when type_announce=\'standard\' then 4 end'
             #post_date__date=date.today()
             #today = date.today()
 			object_list = AnnounceModel.objects.filter(category__iexact=category,region__iexact=region).extra(select={'publication_order': CASE_SQL}, order_by=['publication_order'])
@@ -209,7 +217,7 @@ class ResultView(ListView):
         #recherche suivant la categorie
 		if category:
             #object_list = TheUser.objects.filter(thecompetences__competence__icontains=search, thecompetences__category=category, thecompetences__region=region )
-			CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+			CASE_SQL = 'case when type_announce=\'vip\' then 1 when type_announce=\'pro\' then 2 when type_announce=\'premium\' then 3 when type_announce=\'standard\' then 4 end'
 			object_list = AnnounceModel.objects.filter(category__iexact=category).extra(select={'publication_order': CASE_SQL}, order_by=['publication_order']).order_by('-publication_date')
 			if len(object_list)>0:
 				return object_list
@@ -217,7 +225,7 @@ class ResultView(ListView):
         #recherche suivant la region
 		if region:
             #object_list = TheUser.objects.filter(thecompetences__competence__icontains=search, thecompetences__category=category, thecompetences__region=region )
-			CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+			CASE_SQL = 'case when type_announce=\'vip\' then 1 when type_announce=\'pro\' then 2 when type_announce=\'premium\' then 3 when type_announce=\'standard\' then 4 end'
 			object_list = AnnounceModel.objects.filter(region__iexact=region).extra(select={'publication_order': CASE_SQL}, order_by=['publication_order']).order_by('-publication_date')
 			if len(object_list)>0:
 				return object_list
@@ -226,7 +234,7 @@ class ResultView(ListView):
         #recherche suivant 'search' et la categorie
 		if category and search:
             #object_list = TheUser.objects.filter(thecompetences__competence__icontains=search, thecompetences__category=category, thecompetences__region=region )
-			CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+			CASE_SQL = 'case when type_announce=\'vip\' then 1 when type_announce=\'pro\' then 2 when type_announce=\'premium\' then 3 when type_announce=\'standard\' then 4 end'
 			object_list = AnnounceModel.objects.filter(category__iexact=category).extra(select={'publication_order': CASE_SQL}, order_by=['publication_order'])
 			if len(object_list)>0:
 				return object_list
@@ -234,7 +242,7 @@ class ResultView(ListView):
 
 
 		####
-		CASE_SQL = '(case when type_announce="vip" then 1 when type_announce="pro" then 2 when type_announce="premium" then 3 when type_announce="standard" then 4 end)'
+		CASE_SQL = 'case when type_announce=\'vip\' then 1 when type_announce=\'pro\' then 2 when type_announce=\'premium\' then 3 when type_announce=\'standard\' then 4 end'
 		#today = date.today()
 		
 		#return qs2
@@ -248,11 +256,12 @@ class ResultView(ListView):
 		context['form'] = FilterForm(initial={
 			'search': self.request.GET.get('search', ''),
 			'category': self.request.GET.get('category', ''),
-			'region': self.request.GET.get('region', 'Littoral'),
+			'region': self.request.GET.get('region', ''),
 		})
 
 		return context
 		#return render( request, "exyohri/rechercheCompetence.html", context)
+
 
 
 #details for announce
