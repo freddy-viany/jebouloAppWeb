@@ -14,6 +14,11 @@ from pathlib import Path
 
 import os
 
+#for cloudinary
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jebouloapp',
     'crispy_forms',      #django  for manage the form
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -156,7 +162,7 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = ['static']
 
-STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -201,3 +207,11 @@ LOGGING = {
         },
     }
 }
+
+
+
+cloudinary.config( 
+  cloud_name = "dubeuo6p7", 
+  api_key = "413147919927838", 
+  api_secret = "jTbuWnwXj_BH5D_bjxsE-nfKIDc" 
+)
