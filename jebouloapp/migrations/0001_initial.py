@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('num_CNI', models.IntegerField(null=True, verbose_name='number CNI')),
                 ('type_account', models.CharField(choices=[('standard', 'standard'), ('premium', 'premium'), ('pro', 'pro'), ('vip', 'vip')], default='standard', max_length=25)),
                 ('type_account_certifie', models.CharField(choices=[('certified', 'certified'), ('non-certified', 'non-certified')], default='non-certified', max_length=25)),
-                ('number_of_publication_announce', models.IntegerField(default=1, verbose_name='number publication')),
+                ('number_of_publication_announce', models.IntegerField(default=2, verbose_name='number publication')),
             ],
             options={
                 'ordering': ['type_account'],
