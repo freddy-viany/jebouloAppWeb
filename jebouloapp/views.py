@@ -35,6 +35,10 @@ def signupuser(request):
 		messages.add_message(request,messages.ERROR, "user already exists")
 		return render (request, "jeboulo/usersignuppage.html")
 		#return redirect('homepage')
+	
+	if CustomerModel.objects.filter(phoneno__iexact=phoneno).exists():
+		messages.add_message(request,messages.ERROR, "Ce numero appartient deja a un autre compte")
+		return render (request, "jeboulo/usersignuppage.html")
 
 	#if username doesn't already exists
 	User.objects.create_user(username = username, password=password).save()
