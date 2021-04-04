@@ -3,7 +3,10 @@
 {% load i18n %}
 {% block content %}
 
+{% for message in messages %}
+<p style="text-align: center; color:red">{{message}}</p>
 
+{% endfor %}
 
     <div class="container" style="width:400px; height: 350px; background-color: orange; margin-top: 100px; padding: 30px">
 
