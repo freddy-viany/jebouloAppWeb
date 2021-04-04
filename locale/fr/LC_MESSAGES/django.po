@@ -1,0 +1,709 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-04 18:48+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\jebouloapp\forms.py:17
+msgid "Independant-e"
+msgstr "Independant-e"
+
+#: .\jebouloapp\forms.py:18
+msgid "Entreprise"
+msgstr "Entreprise"
+
+#: .\jebouloapp\forms.py:22 .\jebouloapp\forms.py:109
+msgid "All regions"
+msgstr "Toutes les regions"
+
+#: .\jebouloapp\forms.py:23 .\jebouloapp\forms.py:110
+msgid "Littoral"
+msgstr "Littoral"
+
+#: .\jebouloapp\forms.py:24 .\jebouloapp\forms.py:111
+msgid "Center"
+msgstr "Centre"
+
+#: .\jebouloapp\forms.py:25 .\jebouloapp\forms.py:112
+msgid "West"
+msgstr "Center"
+
+#: .\jebouloapp\forms.py:26 .\jebouloapp\forms.py:113
+msgid "North"
+msgstr "Nord"
+
+#: .\jebouloapp\forms.py:27 .\jebouloapp\forms.py:114
+msgid "South-West"
+msgstr "Sud-Ouest"
+
+#: .\jebouloapp\forms.py:28 .\jebouloapp\forms.py:115
+msgid "South"
+msgstr "Sud"
+
+#: .\jebouloapp\forms.py:29 .\jebouloapp\forms.py:116
+msgid "East"
+msgstr "Est"
+
+#: .\jebouloapp\forms.py:30 .\jebouloapp\forms.py:117
+msgid "North-west"
+msgstr "Nord-Ouest"
+
+#: .\jebouloapp\forms.py:31 .\jebouloapp\forms.py:118
+msgid "Far-North"
+msgstr "Extreme-Nord"
+
+#: .\jebouloapp\forms.py:32 .\jebouloapp\forms.py:119
+msgid "Adamaoua"
+msgstr "Adamaoua"
+
+#: .\jebouloapp\forms.py:36 .\jebouloapp\forms.py:122
+msgid "All categories"
+msgstr "Toutes les categories"
+
+#: .\jebouloapp\forms.py:37 .\jebouloapp\forms.py:123
+msgid "IT & Computer"
+msgstr "IT & Computer"
+
+#: .\jebouloapp\forms.py:38 .\jebouloapp\forms.py:124
+msgid "Banking, Accounting, Finance"
+msgstr "Banque, comptabilité, finance"
+
+#: .\jebouloapp\forms.py:39 .\jebouloapp\forms.py:125
+msgid "community manager, Marketing"
+msgstr "community manager, Marketing"
+
+#: .\jebouloapp\forms.py:40 .\jebouloapp\forms.py:126
+msgid "Arts, Design, Media"
+msgstr "Arts, Design, Media"
+
+#: .\jebouloapp\forms.py:42 .\jebouloapp\forms.py:128
+msgid "Agriculture, Animal Production & Agro-industry"
+msgstr "Agriculture, Production animale et Agro-industrie"
+
+#: .\jebouloapp\forms.py:43 .\jebouloapp\forms.py:129
+msgid "house cleaner lady, Nounou"
+msgstr "Femme de ménage, Nounou"
+
+#: .\jebouloapp\forms.py:44 .\jebouloapp\forms.py:130
+msgid "Building and Public Works, Plumbing, Menustry"
+msgstr "Bâtiment et travaux publics, Plomberie,Menuserie"
+
+#: .\jebouloapp\forms.py:45 .\jebouloapp\forms.py:131
+msgid "Health"
+msgstr "Santé"
+
+#: .\jebouloapp\forms.py:46 .\jebouloapp\forms.py:132
+msgid "Hairdressing, Beauty & Fashion"
+msgstr "Coiffure, Beauté & Mode"
+
+#: .\jebouloapp\forms.py:47 .\jebouloapp\forms.py:133
+msgid "real estate"
+msgstr "Immobilier"
+
+#: .\jebouloapp\forms.py:48 .\jebouloapp\forms.py:134
+msgid "Restoration & Cooking"
+msgstr "Restauration & Cuisine"
+
+#: .\jebouloapp\forms.py:49 .\jebouloapp\forms.py:135
+msgid "Education & Learning"
+msgstr "Éducation et apprentissage"
+
+#: .\jebouloapp\forms.py:50 .\jebouloapp\forms.py:136
+msgid "Consulting firm"
+msgstr "Cabinet de conseil"
+
+#: .\jebouloapp\forms.py:51 .\jebouloapp\forms.py:137
+msgid "Driver"
+msgstr "Chauffeur"
+
+#: .\jebouloapp\forms.py:52 .\jebouloapp\forms.py:138
+msgid "Security guard - Guardian"
+msgstr "Agent de sécurité - Gardien"
+
+#: .\jebouloapp\forms.py:53 .\jebouloapp\forms.py:139
+msgid "Transport & Logistics"
+msgstr "Transport & Logistique"
+
+#: .\jebouloapp\forms.py:54 .\jebouloapp\forms.py:140
+msgid "Journalist, Web Editor"
+msgstr "Journaliste, rédacteur web"
+
+#: .\jebouloapp\forms.py:55 .\jebouloapp\forms.py:141
+msgid "Translation, Interpreting"
+msgstr "Traduction, Interprétation"
+
+#: .\jebouloapp\forms.py:56 .\jebouloapp\forms.py:142
+msgid "Coaching"
+msgstr "Coaching"
+
+#: .\jebouloapp\forms.py:57 .\jebouloapp\forms.py:143
+msgid "Secretariat"
+msgstr "Secretariat"
+
+#: .\jebouloapp\forms.py:58 .\jebouloapp\forms.py:88 .\jebouloapp\forms.py:144
+msgid "Others"
+msgstr "Autres"
+
+#: .\jebouloapp\forms.py:61
+msgid "Select a title"
+msgstr "Votre titre"
+
+#: .\jebouloapp\forms.py:62
+msgid "M"
+msgstr "M"
+
+#: .\jebouloapp\forms.py:63
+msgid "Mme"
+msgstr "Mme"
+
+#: .\jebouloapp\forms.py:64
+msgid "Pastor"
+msgstr "Pasteur"
+
+#: .\jebouloapp\forms.py:65
+msgid "Dr"
+msgstr "Dr"
+
+#: .\jebouloapp\forms.py:66
+msgid "Pr"
+msgstr "Pr"
+
+#: .\jebouloapp\forms.py:67
+msgid "Ing"
+msgstr "Ing"
+
+#: .\jebouloapp\forms.py:68
+msgid "Me"
+msgstr "Me"
+
+#: .\jebouloapp\forms.py:72
+msgid "Indicate your availability per day"
+msgstr "Indiquez votre disponibilité par jour"
+
+#: .\jebouloapp\forms.py:84
+msgid "Indicate your working days"
+msgstr "Indiquez vos jours de travail"
+
+#: .\jebouloapp\forms.py:85
+msgid "Monday-Sunday"
+msgstr "Lundi-Dimanche"
+
+#: .\jebouloapp\forms.py:86
+msgid "Monday-Friday"
+msgstr "Lundi-Vendredi"
+
+#: .\jebouloapp\forms.py:87
+msgid "the weekend"
+msgstr "Le weekend"
+
+#: .\jebouloapp\forms.py:147 .\templates\jeboulo\searchannounce.html:38
+msgid "Search"
+msgstr "Rechercher"
+
+#: .\jebouloapp\forms.py:148
+msgid "region"
+msgstr "region"
+
+#: .\jebouloapp\forms.py:149 .\jebouloapp\models.py:64
+msgid "Category"
+msgstr "Categorie"
+
+#: .\jebouloapp\models.py:30 .\jebouloapp\models.py:73
+msgid "name"
+msgstr "nom"
+
+#: .\jebouloapp\models.py:30 .\jebouloapp\models.py:73
+msgid "Enter your name"
+msgstr "Entrez votre nom"
+
+#: .\jebouloapp\models.py:31 .\jebouloapp\models.py:74
+msgid "Email"
+msgstr "Email"
+
+#: .\jebouloapp\models.py:31 .\jebouloapp\models.py:74
+msgid "Enter your email"
+msgstr "Entrez votre email"
+
+#: .\jebouloapp\models.py:35
+msgid "state account"
+msgstr "Etat du compte"
+
+#: .\jebouloapp\models.py:36
+msgid "validity account"
+msgstr "Validite du compte"
+
+#: .\jebouloapp\models.py:37
+msgid "number CNI"
+msgstr "numero CNI"
+
+#: .\jebouloapp\models.py:40
+msgid "number publication"
+msgstr "nombre de publication"
+
+#: .\jebouloapp\models.py:62
+msgid "category user"
+msgstr "Categorie user"
+
+#: .\jebouloapp\models.py:63
+msgid "Civility"
+msgstr "Civilité"
+
+#: .\jebouloapp\models.py:65
+msgid "City"
+msgstr "Ville"
+
+#: .\jebouloapp\models.py:66
+msgid "Region"
+msgstr "Region"
+
+#: .\jebouloapp\models.py:66
+msgid "Entrer the region"
+msgstr "Entrez votre region"
+
+#: .\jebouloapp\models.py:67
+msgid "Time of work"
+msgstr "Temps de travail"
+
+#: .\jebouloapp\models.py:68
+msgid "Period of work"
+msgstr "periode de travail"
+
+#: .\jebouloapp\models.py:69
+msgid "Describe your competences"
+msgstr "Décrivez vos compétences"
+
+#: .\jebouloapp\models.py:69
+msgid "Describe your expertise"
+msgstr "Décrivez votre expertise"
+
+#: .\jebouloapp\models.py:71
+msgid "image"
+msgstr ""
+
+#: .\jebouloapp\models.py:71
+msgid "Enter your profile picture (Optional)"
+msgstr "Entrez votre photo de profil (facultatif)"
+
+#: .\jebouloapp\models.py:72
+msgid "First name"
+msgstr "Prénom"
+
+#: .\jebouloapp\models.py:72
+msgid "Enter your First name"
+msgstr "Entrez votre prénom"
+
+#: .\jebouloapp\models.py:76
+msgid "Enter a valid international mobile phone number starting with +(237)"
+msgstr "Entrez un numéro de téléphone mobile valide commençant par +(237)"
+
+#: .\jebouloapp\models.py:77
+msgid "Phone"
+msgstr "Téléphone"
+
+#: .\jebouloapp\models.py:82
+msgid "publication date"
+msgstr "date de publication"
+
+#: .\templates\base.html:31
+msgid "Jeboulo Announce Platform"
+msgstr "Plate-forme d'annonces Jeboulo"
+
+#: .\templates\base.html:52
+msgid "Home"
+msgstr "Accueil"
+
+#: .\templates\base.html:62 .\templates\jeboulo\homepage.html:83
+msgid "Search for a skill"
+msgstr "Rechercher une compétence"
+
+#: .\templates\base.html:65 .\templates\jeboulo\homepage.html:77
+msgid "Deposit a skill"
+msgstr "Déposer une compétence"
+
+#: .\templates\base.html:70
+msgid "donate a gift"
+msgstr "Faire un don"
+
+#: .\templates\base.html:73
+msgid "connexion"
+msgstr "connexion"
+
+#: .\templates\base.html:105
+msgid "Subscribe for free to the newsletter"
+msgstr "S'abonner gratuitement à la newsletter"
+
+#: .\templates\base.html:108
+msgid "I register now!"
+msgstr "Je m'inscris"
+
+#: .\templates\jeboulo\customerpage.html:8
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: .\templates\jeboulo\customerpage.html:10
+msgid "Your account is"
+msgstr "Votre compte est"
+
+#: .\templates\jeboulo\customerpage.html:15
+#: .\templates\jeboulo\customerpage.html:17
+msgid "post announce"
+msgstr "publier une annonce"
+
+#: .\templates\jeboulo\customerpage.html:20
+msgid "logout"
+msgstr "se deconnecter"
+
+#: .\templates\jeboulo\customerpage.html:29
+msgid "Let everything that has breath praise the Lord. Psalm 150:6"
+msgstr "Que tout ce qui respire loue le Seigneur. Psaume 150:6"
+
+#: .\templates\jeboulo\customerpage.html:38
+msgid "Be a PREMIUM account:"
+msgstr "Devenez un compte PREMIUM :"
+
+#: .\templates\jeboulo\customerpage.html:39
+msgid "1000 FCFA"
+msgstr "1000 FCFA"
+
+#: .\templates\jeboulo\customerpage.html:41
+#: .\templates\jeboulo\customerpage.html:57
+#: .\templates\jeboulo\customerpage.html:75
+msgid "Boost your account for a better visibility:"
+msgstr "Boostez votre compte pour une meilleure visibilité :"
+
+#: .\templates\jeboulo\customerpage.html:43
+msgid "Your visibility is multiplied by 10 for 5 days"
+msgstr "Votre visibilité est multipliée par 10 pendant 5 jours."
+
+#: .\templates\jeboulo\customerpage.html:44
+msgid "+ 2 sponsored ads"
+msgstr "+ 2 annonces sponsorisées"
+
+#: .\templates\jeboulo\customerpage.html:45
+#: .\templates\jeboulo\customerpage.html:61
+#: .\templates\jeboulo\customerpage.html:79
+msgid "Acheter"
+msgstr "Acheter"
+
+#: .\templates\jeboulo\customerpage.html:54
+msgid "Be a PRO account:"
+msgstr "Devenez un compte PRO:"
+
+#: .\templates\jeboulo\customerpage.html:55
+msgid "5000 FCFA"
+msgstr "5000 FCFA"
+
+#: .\templates\jeboulo\customerpage.html:59
+msgid "Your visibility is multiplied by 12 for 3 Months"
+msgstr "Votre visibilité est multipliée par 12 pendant 3 mois."
+
+#: .\templates\jeboulo\customerpage.html:60
+msgid "+ 10 sponsored ads"
+msgstr "+ 10 annonces sponsorisées"
+
+#: .\templates\jeboulo\customerpage.html:72
+msgid "Be a VIP account:"
+msgstr "Devenez un compte VIP:"
+
+#: .\templates\jeboulo\customerpage.html:73
+msgid "10 000 FCFA"
+msgstr "10 000 FCFA"
+
+#: .\templates\jeboulo\customerpage.html:77
+msgid "Your visibility is multiplied by 15 for 6 Months"
+msgstr "Votre visibilité est multipliée par 15 pendant 6 mois."
+
+#: .\templates\jeboulo\customerpage.html:78
+msgid "+ 15 sponsored ads"
+msgstr "+ 15 annonces sponsorisées"
+
+#: .\templates\jeboulo\customerpage.html:89
+msgid "Buy one pack to"
+msgstr "Achetez un pack pour"
+
+#: .\templates\jeboulo\customerpage.html:92
+msgid "My announce package"
+msgstr "Mon pack d'annonces"
+
+#: .\templates\jeboulo\customerpage.html:95
+msgid "You still have:"
+msgstr "Vous avez encore:"
+
+#: .\templates\jeboulo\customerpage.html:97
+msgid "Ads"
+msgstr "annonces"
+
+#: .\templates\jeboulo\homepage.html:27
+msgid "Competence platform for Christians."
+msgstr "Une plateforme de compétences pour les chrétiens."
+
+#: .\templates\jeboulo\homepage.html:33
+msgid "You find here"
+msgstr "Vous trouvez ici"
+
+#: .\templates\jeboulo\homepage.html:34
+msgid "All the skills of Christians in one click."
+msgstr "Toutes les compétences des chrétiens en un seul clic."
+
+#: .\templates\jeboulo\homepage.html:40
+msgid "Work in Christian communities"
+msgstr "Travailler dans les communautés chrétiennes"
+
+#: .\templates\jeboulo\homepage.html:41
+msgid "It is good for brothers to stay together."
+msgstr "Il est bon que des frères restent ensemble."
+
+#: .\templates\jeboulo\homepage.html:62
+msgid "skills Available here!!"
+msgstr "Compétences disponibles ici !!"
+
+#: .\templates\jeboulo\homepage.html:75
+msgid "Would you like to work?"
+msgstr "Vous voulez travailler ?"
+
+#: .\templates\jeboulo\homepage.html:81
+msgid "Do you want to recruit?"
+msgstr "Vous voulez recruter ?"
+
+#: .\templates\jeboulo\registerannounce.html:17
+msgid "Submitting a skill"
+msgstr "Soumettre une compétence"
+
+#: .\templates\jeboulo\registerannounce.html:91
+msgid "publish my announce"
+msgstr "publier mon annonce"
+
+#: .\templates\jeboulo\resultannounce.html:18
+msgid ""
+"With my mouth I will greatly extol the Lord; in the great throng of "
+"worshipers I will praise him. Psalm 109:30"
+msgstr ""
+"De ma bouche, j'exalterai le Seigneur ; dans la grande foule des je le "
+"louerai. Psaume 109:30"
+
+#: .\templates\jeboulo\resultannounce.html:144
+msgid "City:"
+msgstr "Ville:"
+
+#: .\templates\jeboulo\resultannounce.html:149
+msgid "see more"
+msgstr "Voir la suite"
+
+#: .\templates\jeboulo\resultannounce.html:152
+msgid "Account:"
+msgstr "Compte"
+
+#: .\templates\jeboulo\resultannounce.html:171
+msgid "first"
+msgstr "first"
+
+#: .\templates\jeboulo\resultannounce.html:172
+msgid "previous"
+msgstr "previous"
+
+#: .\templates\jeboulo\resultannounce.html:180
+msgid "next"
+msgstr "next"
+
+#: .\templates\jeboulo\resultannounce.html:181
+msgid "last"
+msgstr "last"
+
+#: .\templates\jeboulo\searchannounce.html:12
+msgid "Searching for the skills of Christians"
+msgstr "Recherche des compétences des chrétiens"
+
+#: .\templates\jeboulo\searchannounce.html:14
+msgid "Key words. Example: commercial, engineer, secretary..."
+msgstr "Mots clés. Exemple : commercial, ingénieur, secrétaire..."
+
+#: .\templates\jeboulo\searchannounce.html:49
+#, fuzzy
+#| msgid ""
+#| "Let them give thanks to the Lord for his unfailing love and his wonderful "
+#| "deeds for mankind, for he satisfies the thirsty\n"
+#| "and fills the hungry with good things. psalm 107:8-9"
+msgid ""
+"\n"
+"        Let them give thanks to the Lord for his unfailing love and his "
+"wonderful deeds for mankind, for he satisfies the thirsty\n"
+"        and fills the hungry with good things. psalm 107:8-9\n"
+"        "
+msgstr "Qu'ils rendent grâce au Seigneur pour son amour indéfectible et ses merveilles en faveur des hommes, car il rassasie les assoiffés et comble de biens les affamés. psaume 107:8-9"
+"Qu'ils rendent grâce au Seigneur pour son amour indéfectible et ses "
+"merveilles en faveur des hommes, car il rassasie les assoiffés et comble de "
+"biens les affamés. psaume 107:8-9"
+
+#: .\templates\jeboulo\userDetails.html:18
+msgid ""
+"also that everyone should eat and drink and take pleasure in all his toil-"
+"this is God's gift to man. Ecclesiaste 3:13"
+msgstr ""
+"Que chacun mange et boive et prenne plaisir à tout son labeur c'est le don "
+"de Dieu à l'homme. Ecclésiaste 3:13"
+
+#: .\templates\jeboulo\userDetails.html:21
+msgid " Information:!"
+msgstr "Information:!"
+
+#: .\templates\jeboulo\userDetails.html:22
+msgid ""
+"We advise you to only pay out a sum of money if you trust the advertiser."
+msgstr ""
+"Nous vous conseillons de ne verser une somme d'argent que si vous avez "
+"confiance en l'annonceur."
+
+#: .\templates\jeboulo\userDetails.html:24
+msgid " A certified account has an identity known to our platform."
+msgstr "Un compte certifié a une identité connue de notre plateforme."
+
+#: .\templates\jeboulo\userDetails.html:154
+msgid "Skills published from an account"
+msgstr "Les compétences publiées à partir d'un compte"
+
+#: .\templates\jeboulo\userDetails.html:155
+msgid "Reference:"
+msgstr "Reference:"
+
+#: .\templates\jeboulo\userDetails.html:160
+msgid " Ville:"
+msgstr "Ville:"
+
+#: .\templates\jeboulo\userDetails.html:169
+msgid " Skills:"
+msgstr "Competences"
+
+#: .\templates\jeboulo\userDetails.html:175
+msgid "Description"
+msgstr "Description"
+
+#: .\templates\jeboulo\userDetails.html:185
+msgid "Disponibility :"
+msgstr "Disponibilité"
+
+#: .\templates\jeboulo\userDetails.html:189
+msgid " Time :"
+msgstr "Temps :"
+
+#: .\templates\jeboulo\userDetails.html:204
+msgid " Skills of the advertiser"
+msgstr "Compétences de l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:206
+msgid " Votes :"
+msgstr "Votes :"
+
+#: .\templates\jeboulo\userDetails.html:207
+msgid " Score:"
+msgstr "Note :"
+
+#: .\templates\jeboulo\userDetails.html:212
+msgid " Contact the advertiser"
+msgstr " Contacter l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:214
+msgid " See the number"
+msgstr " Voir le numero"
+
+#: .\templates\jeboulo\userDetails.html:217
+msgid " Send a message"
+msgstr " Envoyer un message"
+
+#: .\templates\jeboulo\userDetails.html:228
+msgid "Advertiser's number"
+msgstr "Contact de l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:235
+msgid " Phone:"
+msgstr " Téléphone:"
+
+#: .\templates\jeboulo\userDetails.html:240
+#: .\templates\jeboulo\userDetails.html:266
+#: .\templates\jeboulo\userDetails.html:307
+#: .\templates\jeboulo\userDetails.html:340
+msgid "Close"
+msgstr "Fermer"
+
+#: .\templates\jeboulo\userDetails.html:241
+#: .\templates\jeboulo\userDetails.html:267
+#: .\templates\jeboulo\userDetails.html:308
+msgid "Save changes"
+msgstr "Enregistrer"
+
+#: .\templates\jeboulo\userDetails.html:255
+msgid "Advertiser's email"
+msgstr "Email de l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:262
+msgid " Email :"
+msgstr " Email :"
+
+#: .\templates\jeboulo\userDetails.html:281
+msgid "Evaluate the advertiser"
+msgstr "Evaluer l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:284
+#: .\templates\jeboulo\userDetails.html:322
+msgid "Denounce the advertiser"
+msgstr "Denoncer l'annonceur"
+
+#: .\templates\jeboulo\userDetails.html:296
+msgid "Enter a mark on 5"
+msgstr "Entrez une note sur 5"
+
+#: .\templates\jeboulo\userDetails.html:303
+msgid " mark:"
+msgstr " Note:"
+
+#: .\templates\jeboulo\userDetails.html:329
+msgid " your Email :"
+msgstr " Votre Email:"
+
+#: .\templates\jeboulo\userDetails.html:332
+msgid " your name :"
+msgstr " Votre nom:"
+
+#: .\templates\jeboulo\userDetails.html:336
+msgid " your message :"
+msgstr " votre message :"
+
+#: .\templates\jeboulo\userDetails.html:341
+msgid "send"
+msgstr "Envoyer"
+
+#: .\templates\jeboulo\userloginpage.html:10
+msgid "Please Login"
+msgstr "Connectez-vous"
+
+#: .\templates\jeboulo\userloginpage.html:15
+msgid "I forgot my password"
+msgstr "J'ai oublié mon mot de passe"
+
+#: .\templates\jeboulo\userloginpage.html:19
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: .\templates\jeboulo\userloginpage.html:19
+msgid "create!"
+msgstr "Créer!"
+
+#: .\templates\jeboulo\usersignuppage.html:17
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#~ msgid "Picture announce"
+#~ msgstr "Photo de l'annonce"
