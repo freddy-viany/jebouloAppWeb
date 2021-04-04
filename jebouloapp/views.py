@@ -69,7 +69,7 @@ def userauthenticate(request):
 
 	#user doesn't exists
 	if user is None:
-		messages.add_message(request,messages.ERROR,"invalid credentials")
+		messages.add_message(request,messages.ERROR, "invalid credentials --- identifiant ou mot de passe invalide")
 		return redirect('userloginpage')
 
 
