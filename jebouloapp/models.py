@@ -33,7 +33,7 @@ class CustomerModel(models.Model):
 	num_CNI = models.IntegerField(verbose_name=_("number CNI"), null=True)
 	type_account = models.CharField(max_length = 25,choices=TYPE_ACCOUNT_CHOICES, default='standard')
 	type_account_certifie = models.CharField(max_length = 25,choices=TYPE_ACCOUNT_CHOICES_CERTIFIE, default='non-certified')
-	number_of_publication_announce = models.IntegerField(verbose_name=_("number publication"), default=1)
+	number_of_publication_announce = models.IntegerField(verbose_name=_("number publication"), default=2)
 
 	 #to have a specific url for one user
 	def get_absolute_url(self):
