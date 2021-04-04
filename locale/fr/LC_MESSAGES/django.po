@@ -632,7 +632,7 @@ msgstr "Enregistrer"
 
 #: .\templates\jeboulo\userDetails.html:255
 msgid "Advertiser's email"
-msgstr "Email de l'annonceur"
+msgstr "Emaild de l'annonceur"
 
 #: .\templates\jeboulo\userDetails.html:262
 msgid " Email :"
