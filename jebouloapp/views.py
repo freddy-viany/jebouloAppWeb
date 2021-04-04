@@ -33,7 +33,8 @@ def signupuser(request):
 	#if username alredy exists
 	if User.objects.filter(username = username).exists():
 		messages.add_message(request,messages.ERROR, "user already exists")
-		return redirect('homepage')
+		return render (request, "jeboulo/usersignuppage.html")
+		#return redirect('homepage')
 
 	#if username doesn't already exists
 	User.objects.create_user(username = username, password=password).save()
