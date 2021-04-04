@@ -44,8 +44,8 @@ def signupuser(request):
 	User.objects.create_user(username = username, password=password).save()
 	lastobject = len(User.objects.all())-1
 	CustomerModel(userid= User.objects.all()[int(lastobject)].id, phoneno=phoneno).save()
-	messages.add_message(request,messages.ERROR, "user succesfully created")
-	return redirect('homepage')
+	messages.add_message(request,messages.ERROR, "user succesfully created ---utilisateur cree avec succes")
+	return redirect('customerpage')
 		
 
 
