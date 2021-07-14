@@ -98,6 +98,8 @@ class AnnounceForm(forms.ModelForm):
             
         }
 
+       
+        
 
 
 ####################################
@@ -106,47 +108,47 @@ class AnnounceForm(forms.ModelForm):
 class FilterForm(forms.Form):
     
     REGION_CHOICES = (
-       ('', _('All regions') ),
+       ('', _('Toutes les regions') ),
        ('Littoral', _('Littoral') ),
-       ('Centre', _('Center')),
-       ('Ouest', _('West')),
-       ('Nord', _('North')),
-       ('Sud-Ouest', _('South-West')),
-       ('Sud', _('South')),
-       ('Est', _('East')),
-       ('Nord-Ouest', _('North-west')),
-       ('Extreme-Nord', _('Far-North')),
+       ('Centre', _('Centre')),
+       ('Ouest', _('Ouest')),
+       ('Nord', _('Nord')),
+       ('Sud-Ouest', _('Sud-Ouest')),
+       ('Sud', _('Sud')),
+       ('Est', _('Est')),
+       ('Nord-Ouest', _('Nord-Ouest')),
+       ('Extreme-Nord', _('Extreme-Nord')),
        ('Adamaoua', _('Adamaoua')),)
 
     CATEGORY_CHOICES=(
-       ('', _('All categories') ),
+       ('', _('Toutes les categories') ),
        ('IT & Computer', _('IT & Computer') ),
-       ('Banque, Comptabilite, Finance', _('Banking, Accounting, Finance')),
+       ('Banque, Comptabilite, Finance', _('Banque, Comptabilite, Finance')),
        ('community manager, Marketing', _('community manager, Marketing')),
        ('Arts, Design, Media', _('Arts, Design, Media')),
        ('Ingenierie', 'Ingenierie'),
-       ('Agriculture, Elevage & Agro-industrie', _('Agriculture, Animal Production & Agro-industry')),
-       ('Menagere, Nounou', _('house cleaner lady, Nounou')),
-       ('BTP, Plomberie, Menuserie', _('Building and Public Works, Plumbing, Menustry')),
-       ('Sante', _('Health')),
-       ('Coiffure, Esthétique & Mode', _('Hairdressing, Beauty & Fashion')),
-       ('Immobilier', _('real estate')),
-       ('Restauration & Cuisine', _('Restoration & Cooking')),
-       ('Education & Formation', _('Education & Learning')),
-       ('Cabinet conseil', _('Consulting firm')),
-       ('Chauffeur', _('Driver')),
-       ('Vigile - Gardien', _('Security guard - Guardian')),
-       ('Transport & Logistique', _('Transport & Logistics')),
-       ('Journaliste, Redacteur Web', _('Journalist, Web Editor')),
-       ('Traduction, Interprete', _('Translation, Interpreting')),
+       ('Agriculture, Elevage & Agro-industrie', _('Agriculture, Elevage & Agro-industrie')),
+       ('Menagere, Nounou', _('Menagere, Nounou')),
+       ('BTP, Plomberie, Menuserie', _('BTP, Plomberie, Menuserie')),
+       ('Sante', _('Sante')),
+       ('Coiffure, Esthétique & Mode', _('Coiffure, Esthétique & Mode')),
+       ('Immobilier', _('Immobilier')),
+       ('Restauration & Cuisine', _('Restauration & Cuisine')),
+       ('Education & Formation', _('Education & Formation')),
+       ('Cabinet conseil', _('Cabinet conseil')),
+       ('Chauffeur', _('Chauffeur')),
+       ('Vigile - Gardien', _('Vigile - Gardien')),
+       ('Transport & Logistique', _('Transport & Logistique')),
+       ('Journaliste, Redacteur Web', _('Journaliste, Redacteur Web')),
+       ('Traduction, Interprete', _('Traduction, Interprete')),
        ('Coaching', _('Coaching')),
        ('Secretariat', _('Secretariat')),
-       ('Autres', _('Others')),)
+       ('Autres', _('Autres')),)
         
 
     search= forms.CharField(required=False, widget=forms.TextInput(attrs={'placeholder': 'Entrer les mots cles'}), label=_('Search'))
     region = forms.ChoiceField(choices = REGION_CHOICES, required=False, label=_('region'))
-    category =forms.ChoiceField(choices=CATEGORY_CHOICES, required=False, label=_('Category'))
+    category =forms.ChoiceField(choices=CATEGORY_CHOICES, required=False, label=_('Categorie'))
 
 
 class Testform(forms.ModelForm):

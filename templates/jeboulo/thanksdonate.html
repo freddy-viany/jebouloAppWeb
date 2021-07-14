@@ -1,0 +1,46 @@
+﻿{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="">
+
+            <h6 class="text-success text-center">{% translate "Let everything that has breath praise the Lord. Psalm 150:6" %}</h6>
+
+
+            <div class="row">
+                <div class="sm-12  rounded" style="padding-bottom:5px;padding-top:5px;">
+
+                    <div class="jumbotron text-center">
+                        <h1 class="display-3">{% translate "Thank You!" %}</h1>
+                       
+                        <hr>
+                        <p>
+                            {% translate "Having trouble?" %} <a href="">{% translate "Contact us" %}</a>
+                        </p>
+                        <hr>
+                        <p>
+                            <a href="#">support@jeboulo.com</a> | <a href="#"> 6 50 08 96 13 </a>
+                        </p>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-sm" href="https://jeboulo.com/" role="button">{% translate "Continue to homepage" %}</a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

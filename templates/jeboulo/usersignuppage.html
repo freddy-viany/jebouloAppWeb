@@ -20,7 +20,7 @@
             {% csrf_token %}
             <input type="text" class="form-control" name="username" required="true" placeholder="username" style="margin-bottom: 20px">
             <input type="password" class="form-control" name="password" required="true" placeholder="password" style="margin-bottom: 20px">
-            <input type="number" class="form-control" name="phoneno" required="true" placeholder="phone" style="margin-bottom: 20px">
+            <input type="number" class="form-control" name="phoneno" required="true" placeholder="phone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9" style="margin-bottom: 20px">
             <input type="submit" name="" class="btn btn-success" style="display: block;margin: auto;">
         </form>
     </div>

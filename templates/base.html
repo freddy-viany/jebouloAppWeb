@@ -1,12 +1,16 @@
-{% load static %}
+﻿{% load static %}
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <link rel="stylesheet" href="./css/stylefooter.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Jeboulo, plateforme de travail, travailleurs chretiens, chretiens et emploi, trouver un travailleur chretien, annonces chretiennes">
+    <meta name="keywords" content="jeboulo, travail, chretien, emploi">
+    <meta name="author" content="D2A- freddy viany T">
 
 
     <!-- Custom font icons-->
@@ -40,7 +44,7 @@
 <nav class="navbar navbar-expand-lg " id="id-navbar">
     <div class="container-fluid">
         <!-- Navbar Brand -->
-        <a class="navbar-brand" id='navnav-brand' href="#"><img src="{% static '/img/logo.png' %}" alt="" style="width: 300px; height: 86px;"></a>
+        <a class="navbar-brand" id='navnav-brand' href="#"><img src="{% static '/img/jeboulo.png' %}" alt="" style="width: 300px; height: 86px;"></a>
         <!-- Toggle Button-->
         <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" id="btnbtn"><span>Menu</span><i class="fa fa-bars"></i></button>
         <!-- Navbar Menu -->
@@ -67,7 +71,7 @@
             </ul>
             <ul class="navbar-nav ml-auto bg-light rounded">
                 <li>
-                    <a href="#" class="btn btn-outline-danger btn-sm" id="btnbtn"><i class="fa fa-hand-holding-usd"></i>{% translate "donate a gift" %}</a>
+                    <a href="/donatepageview/" class="btn btn-outline-danger btn-sm" id="btnbtn"><i class="fa fa-hand-holding-usd"></i>{% translate "donate a gift" %}</a>
                 </li> &nbsp;
                 <li>
                     <a href="/userloginview/" class="btn btn-success btn-sm" id="btnbtn"><i class="fa fa-user"></i>{% translate "connexion" %}</a>
@@ -141,14 +145,52 @@
             </li>
         </ul>
         <!-- Social buttons -->
+
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-             2021 Copyright:
-            <a href="#"> D2A</a>
+        <!-- Site footer -->
+        <div class="site-footer bg-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About US</h6>
+                        <p class="text-justify text-white">jeboulo.com <i> WANTS TO BE SIMPLE. </i> We are a platform for connecting service needers and service providers.</p>
+                        <p class="text-justify text-white">jeboulo.com <i> VEUT ÊTRE SIMPLE. </i> Nous sommes une plateforme qui permet de mettre en relation les demandeurs et les fournisseurs de services.</p>
+                        <p class="text-justify text-white">To know more about us? <a class="text-dark" href="#">click here</a> </p>
+                        <p class="text-justify text-white">Nous connaitre en profondeur? <a class="text-dark" href="#">cliquez ici</a> </p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Contacts</h6>
+                        <ul class="footer-links">
+                            <li><a class="text-dark" href="#">support@jeboulo.com </a> </li>
+                            <li><a class="text-dark" href="#"> 6 50 08 96 13 </a> </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Localisation</h6>
+                        <ul class="footer-links">
+                            <li><a class="text-dark" href="#"> Douala, Cameroun </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                            Copyright &copy; 2021 All Rights Reserved by
+                            <a class="text-dark" href="digitalinafrica.com">D2A</a>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!-- Copyright -->
         {% endblock footerblook%}
-    </footer>
+   </footer>
     <!-- Footer -->
 </body>
 
