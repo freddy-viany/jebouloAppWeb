@@ -5,6 +5,10 @@ from django.utils.translation import gettext_lazy as _
 
 from cloudinary.models import CloudinaryField
 
+class Photo(models.Model):
+  image = CloudinaryField('image')
+
+
 # Create your models here.
 
 class CustomerModel(models.Model):
@@ -23,13 +27,14 @@ class CustomerModel(models.Model):
 	phoneno = models.CharField(max_length=20)
 
 	#information supplementaires
-	last_name = models.CharField(verbose_name =_("name"), max_length=30, help_text=_('Enter your name'),null=True)
-	email = models.EmailField(verbose_name =_("Email"), max_length=50, help_text=_('Enter your email'),null=True)
+	last_name = models.CharField(verbose_name =_("name"), max_length=50, help_text=_('Enter your name'),default='a remplir si certification de compte')
+	email = models.EmailField(verbose_name =_("Email"), max_length=40, help_text=_('Enter your email'),default='provision@jeboulo.com')
 
 	date_creation_account = models.DateTimeField(auto_now_add=True)
 	current_date = models.DateTimeField(auto_now_add=True)
 	state_acount = models.CharField(verbose_name=_("state account"), max_length = 75, default='actif')
-	validty_acount = models.CharField(verbose_name=_("validity account"), max_length = 75,default='valid')
+	validty_acount = models.CharField(verbose_name=_("validity account"), max_length = 75,default='non-sponsorise')
+	#il faut une ligne pour l'expiration de la date de promotion. On pourra le faire manuellement lorsque un individi a sponsorise sa page
 	num_CNI = models.IntegerField(verbose_name=_("number CNI"), null=True)
 	type_account = models.CharField(max_length = 25,choices=TYPE_ACCOUNT_CHOICES, default='standard')
 	type_account_certifie = models.CharField(max_length = 25,choices=TYPE_ACCOUNT_CHOICES_CERTIFIE, default='non-certified')
@@ -40,7 +45,7 @@ class CustomerModel(models.Model):
 		return reverse('detailsUser', args=[str(self.id)])
 
 	def __str__(self):
-		return "%s %s" % (self.userid, self.type_account)
+		return "%s %s %s %s" % (self.userid, self.type_account, self.validty_acount, self.type_account_certifie)
 
 	class Meta:
 		ordering = ['type_account']
@@ -65,15 +70,16 @@ class AnnounceModel(models.Model):
 	competence = models.TextField(verbose_name =_("Describe your competences"), max_length = 100, help_text=_("Describe your expertise"), default='je suis capable de:')
 	#picture_announce = models.ImageField(verbose_name =_("Picture announce"), upload_to='imgProfil/%Y/%m/%d',blank=True,null=True, help_text=_("Enter your profile picture (Optional)") )
 	picture_announce = CloudinaryField(verbose_name =_("image"),blank=True,null=True, help_text=_("Enter your profile picture (Optional)"))
-	
 	first_name = models.CharField(verbose_name =_("First name"), max_length=30, help_text=_('Enter your First name'))
 	last_name = models.CharField(verbose_name =_("name"), max_length=30, help_text=_('Enter your name'))
 	email = models.EmailField(verbose_name =_("Email"), max_length=50, help_text=_('Enter your email'))
-	phone_regex = RegexValidator(regex=r"^\+(?:[0-9]●?){6,14}[0-9]$", message=_("Enter a valid international mobile phone number starting with +(237)"))
+	#phone_regex = RegexValidator(regex=r"^\+(?:[0-9]●?){6,14}[0-9]$", message=_("Enter a valid international mobile phone number starting with +(237)"))
+	#^(6\d{8})|(6\d{2}\s\d{2}\s\d{2}\s\d{2})|(\+2376\d{8})|(\+237\s*6\d{8})|(00237\d{9})|(00237\s*6\d{8})$
+	phone_regex = RegexValidator(regex=r"^(6\d{8})|(6\d{2}\s\d{2}\s\d{2}\s\d{2})|(\+2376\d{8})|(\+237\s*6\d{8})|(00237\d{9})|(00237\s*6\d{8})$", message=_("Enter a valid  mobile phone number"))
 	mobile_phone = models.CharField(validators=[phone_regex], verbose_name=_("Phone"), max_length=27)
-
+	
     #information supplementaires
-	number_of_vote = models.IntegerField(default=0)
+	number_of_votes = models.IntegerField(default=0)
 	note = models.IntegerField(default=0)
 	publication_date = models.DateTimeField(verbose_name=_("publication date"), auto_now_add=True)
 	type_announce = models.CharField(max_length = 25,choices=TYPE_ANNOUNCE_CHOICES, default='standard')
