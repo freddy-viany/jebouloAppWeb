@@ -11,7 +11,7 @@ class Photo(models.Model):
 
 # Create your models here.
 
-class CustomerModel(models.Model):
+class CustomerModel_old(models.Model):
 	#type de compte
 	TYPE_ACCOUNT_CHOICES = (
        ('standard', 'standard' ),
@@ -51,7 +51,7 @@ class CustomerModel(models.Model):
 		ordering = ['type_account']
 
 
-class AnnounceModel(models.Model):
+class AnnounceModel_old(models.Model):
 
 	#type de compte certifie ou non
 	TYPE_ANNOUNCE_CHOICES = (
