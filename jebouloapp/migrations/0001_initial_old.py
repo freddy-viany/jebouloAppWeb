@@ -84,7 +84,7 @@ class AnnounceModel_old(models.Model):
 	publication_date = models.DateTimeField(verbose_name=_("publication date"), auto_now_add=True)
 	type_announce = models.CharField(max_length = 25,choices=TYPE_ANNOUNCE_CHOICES, default='standard')
 
-	customermodel = models.ForeignKey(CustomerModel, related_name='usermodel', on_delete=models.CASCADE)
+	customermodel = models.ForeignKey(CustomerModel_old, related_name='usermodel', on_delete=models.CASCADE)
 
 	def __str__(self):
 		return self.type_announce
