@@ -10,7 +10,7 @@ from django.views.generic import ListView, DetailView
 from django.core.paginator import Paginator
 from django.db.models import Q , F, Case, When, Value, IntegerField
 #API paiement
-from  payUnit import payUnit
+from  payDex import payDex
 import random
 
 # Create your views here.
@@ -18,7 +18,7 @@ import random
 
 ###paiement section
 #Api paiement --payunit
-payment = payUnit({
+payment = payDex({
 	"apiUsername": 'payunit_sand_MEBLfTkpu',
 	"apiPassword": '9babe1c0-08b4-474b-b2b9-816cdb78cd52',
 	"api_key": 'a5187e43ea45627e4a6a51953b057f828f2a0b37',
@@ -48,7 +48,7 @@ def paiementpremiumview(request):
 	
 	
 
-	payment1 = payUnit({
+	payment1 = payDex({
 	"apiUsername": 'payunit_sand_MEBLfTkpu',
 	"apiPassword": '9babe1c0-08b4-474b-b2b9-816cdb78cd52',
 	"api_key": 'a5187e43ea45627e4a6a51953b057f828f2a0b37',
@@ -79,7 +79,7 @@ def paiementproview(request):
 		#transaction_ID = str(fone_number)+ "a" + str(b) + "pro" + str(random_number)
 		b = b +1
 
-	payment2 = payUnit({
+	payment2 = payDex({
 	"apiUsername": 'payunit_sand_MEBLfTkpu',
 	"apiPassword": '9babe1c0-08b4-474b-b2b9-816cdb78cd52',
 	"api_key": 'a5187e43ea45627e4a6a51953b057f828f2a0b37',
@@ -111,7 +111,7 @@ def paiementvipview(request):
 		#transaction_ID = str(fone_number)+ "a" + str(b) + "vip" + str(random_number)
 		b = b +1
 
-	payment3 = payUnit({
+	payment3 = payDex({
 	"apiUsername": 'payunit_sand_MEBLfTkpu',
 	"apiPassword": '9babe1c0-08b4-474b-b2b9-816cdb78cd52',
 	"api_key": 'a5187e43ea45627e4a6a51953b057f828f2a0b37',
@@ -165,7 +165,7 @@ def donateview(request):
 	amount= request.POST['amount']
 
 	
-	paymentdonate = payUnit({
+	paymentdonate = payDex({
 	"apiUsername": 'payunit_sand_MEBLfTkpu',
 	"apiPassword": '9babe1c0-08b4-474b-b2b9-816cdb78cd52',
 	"api_key": 'a5187e43ea45627e4a6a51953b057f828f2a0b37',
